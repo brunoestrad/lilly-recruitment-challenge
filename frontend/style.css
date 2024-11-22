@@ -30,3 +30,46 @@ body {
 }
 
 /* ---- Your custom styles below ---- */
+
+header{
+    background-color: rgba(255, 220, 220, 0.4);
+    display: flex;
+    flex-direction: row;
+    border-bottom: 5px solid red;
+    padding-left: 40px;
+}
+
+main > h2 {
+    padding-left: 40px;
+}
+
+nav{
+    align-self: flex-end;
+}
+
+.available-meds{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.medicine-card {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid hsla(0, 0%, 0%, 0.1);
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px;
+    width: 200px;
+    align-items: center;
+    background-color: white;
+    box-shadow: 5px 5px 10px hsla(0, 0%, 0%, 0.50);
+}
+
+.medicine-name{
+
+}
+
+.medicine-price{
+    font-size: 1.2rem;
+    font-style: italic;
+}
