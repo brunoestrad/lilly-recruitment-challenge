@@ -40,16 +40,21 @@ header{
 }
 
 main > h2 {
-    padding-left: 40px;
+    padding: 20px 40px;
+    background-color: white;
+    text-align: center;
+    font-size: 2rem;
 }
 
 nav{
     align-self: flex-end;
 }
 
+/* Available medicines */
 .available-meds{
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 40px;
 }
 
 .medicine-card {
@@ -66,10 +71,67 @@ nav{
 }
 
 .medicine-name{
-
+    font-weight: bold;
+    text-align: center;
 }
 
 .medicine-price{
     font-size: 1.2rem;
     font-style: italic;
+    text-align: center;
+}
+
+/* Add medicine */
+.edit-meds{
+    margin-top : 0;
+    background-color: white;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.add-form, .delete-form, .update-form{
+    display: flex;
+    flex-direction: column;
+    min-width: 25%;
+    max-width: 300px;
+    height: fit-content;
+    margin: 40px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 20px;
+    padding-top: 0;
+}
+
+    button[type="submit"]{
+        margin: 20px;
+        padding: 10px;
+        border-radius: 10px;
+        border: 1px solid hsla(0, 0%, 0%, 0.25);
+        font-size: 1.1rem;
+    }
+    button[type="submit"]:hover{
+        background-color: hsla(0, 0%, 0%, 0.2);
+        cursor: pointer;
+    }
+
+    .name-add, .name-update, .name-delete{
+        margin: 20px;
+        padding: 10px;
+        border-radius: 10px;
+        border: 1px solid hsla(0, 0%, 0%, 0.25);
+        font-size: 1.1rem;
+    }
+
+    .price-add, .price-update{
+        margin: 20px;
+        padding: 10px;
+        border-radius: 10px;
+        border: 1px solid hsla(0, 0%, 0%, 0.25);
+        font-size: 1.1rem;
+    }
+
+.error-display{
+    color: red;
 }
