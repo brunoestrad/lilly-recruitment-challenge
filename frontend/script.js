@@ -124,9 +124,6 @@ updateMedsForm.addEventListener("submit", async event => {
         } catch (error) {
             alert("Failed to update medicine")
         }
-
-
-
     }else{
         alert("Please, enter name and price for medicine");
     }
@@ -148,6 +145,8 @@ deleteMedsForm.addEventListener("submit", async event => {
                 body: formData
             })
 
+            console.log(response);
+
             if(!response.ok){
                 throw new Error("Failed to delete medicine");
             }
@@ -164,3 +163,27 @@ deleteMedsForm.addEventListener("submit", async event => {
     }
 
 });
+
+async function displayAverage(){
+
+    let result;
+    try {
+        const response = await fetch("http://localhost:8000/average");
+
+        if(!response.ok){
+            throw new Error("Could not fetch average");
+        }
+
+        result = await response.json();
+
+        console.log(result);
+
+    } catch (error) {
+        alert(error)
+    }
+
+    document.getElementById("average").textContent = `Average price for medicines: £${result.average.toFixed(2)}`;
+    
+}
+
+displayAverage();
