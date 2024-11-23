@@ -32,8 +32,8 @@ body {
 /* ---- Your custom styles below ---- */
 
 header{
-    font-family: Brush Script MT, Arial, Helvetica, sans-serif;
-    background-color: rgba(255, 220, 220, 0.4);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: hsl(0, 100%, 30%);
     display: flex;
     flex-direction: row;
     border-bottom: 5px solid red;
@@ -51,40 +51,41 @@ nav{
     align-self: flex-end;
 }
 
-/* Available medicines */
+/* Available medicines style */
 .available-meds{
     display: flex;
     flex-wrap: wrap;
 }
 
-.medicine-card {
-    display: flex;
-    flex-direction: column;
-    border: 2px solid hsla(0, 0%, 0%, 0.1);
-    border-radius: 10px;
-    margin: 0 20px 20px;
-    padding: 20px;
-    width: 200px;
-    align-items: center;
-    background-color: white;
-    
-}
+    .medicine-card {
+        display: flex;
+        flex-direction: column;
+        border: 2px solid hsla(0, 0%, 0%, 0.1);
+        border-radius: 10px;
+        margin: 0 20px 20px;
+        padding: 10px 20px;
+        min-width: 210px;
 
-.medicine-card:hover{
-    box-shadow: 5px 5px 10px hsla(0, 0%, 0%, 0.20);
-}
+        background-color: white; 
+    }
 
-.medicine-name{
-    font-weight: bold;
-    text-align: center;
-}
+    .medicine-card:hover{
+        box-shadow: 5px 5px 10px hsla(0, 0%, 0%, 0.20);
+    }
 
-.medicine-price{
-    font-style: italic;
-    text-align: center;
-}
+    .medicine-name{
+        font-weight: bold;
+        margin-bottom: 0;
+    }
 
-/* Add medicine */
+    .medicine-price{
+        padding: 3px 10px;
+        border-radius: 20px;
+        background-color: hsla(0, 0%, 0%, 0.05);
+        width: fit-content;
+    }
+
+/* Edit medicines style */
 .edit-meds{
     margin-top : 0;
     background-color: white;
@@ -94,35 +95,36 @@ nav{
     flex-wrap: wrap;
 }
 
-.add-form, .delete-form, .update-form{
-    display: flex;
-    flex-direction: column;
-    min-width: 25%;
-    max-width: 300px;
-    height: fit-content;
-    margin: 0 40px 40px;
-    border-radius: 10px;
-    padding: 20px;
-    padding-top: 0;
-}
+    .add-form, .delete-form, .update-form{
+        display: flex;
+        flex-direction: column;
+        min-width: 25%;
+        max-width: 300px;
+        height: fit-content;
+        margin: 0 40px 40px;
+        border-radius: 10px;
+        padding: 20px;
+        padding-top: 0;
+    }
 
-.add-form:hover, .delete-form:hover, .update-form:hover{
-    box-shadow: 5px 5px 10px hsla(0, 0%, 0%, 0.30);
-}
-.add-form:focus-within, .delete-form:focus-within, .update-form:focus-within{
-    box-shadow: 5px 5px 10px hsla(0, 0%, 0%, 0.30);
-}
+    .add-form:hover, .delete-form:hover, .update-form:hover{
+        box-shadow: 5px 5px 10px hsla(0, 0%, 0%, 0.30);
+    }
+    .add-form:focus-within, .delete-form:focus-within, .update-form:focus-within{
+        box-shadow: 5px 5px 10px hsla(0, 0%, 0%, 0.30);
+    }
 
-    .add-button{
+    .add-button, .update-button{
         margin: 20px;
         padding: 10px;
         border-radius: 10px;
         border: none;
-        background-color: hsla(120, 100%, 25%, 0.70);
+        background-color: hsla(0, 0%, 0%);
         color: white;
+        font-weight: bold;
     }
-    .add-button:hover{
-        background-color: hsla(120, 100%, 25%);
+    .add-button:hover, .update-button:hover{
+        background-color: hsla(0, 0%, 0%, 0.8);
         cursor: pointer;
     }
 
@@ -133,22 +135,10 @@ nav{
         border: none;
         background-color: hsla(0, 100%, 50%, 0.7);
         color: white;
+        font-weight: bold;
     }
     .delete-button:hover{
         background-color: hsla(0, 100%, 50%);
-        cursor: pointer;
-    }
-
-    .update-button{
-        margin: 20px;
-        padding: 10px;
-        border-radius: 10px;
-        border: none;
-        background-color:hsla(240, 100%, 50%, 0.7);
-        color: white;
-    }
-    .update-button:hover{
-        background-color: hsla(240, 100%, 50%);
         cursor: pointer;
     }
 
@@ -159,10 +149,7 @@ nav{
         border: 1px solid hsla(0, 0%, 0%, 0.25);
     }
 
-.error-display{
-    color: red;
-}
-
+/* Average text paragraph */
 .average-text{
     font-size: 0.8rem;
     background-color: hsla(0, 0%, 30%);

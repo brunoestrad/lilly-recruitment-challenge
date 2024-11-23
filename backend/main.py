@@ -130,18 +130,18 @@ def get_average():
     """
     This function reads the data.json file and returns the average price for medicines.
     Returns:
-        dict: A dictionary of all medicines
+        dict: A dictionary containing the average price of a medicine
     """
     sum = 0
     counter = 0
     with open('data.json') as meds:
         data = json.load(meds)
-        for med in data["medicines"]:
-            price = med.get("price")
-            if price is not None:
-                sum += price
-                counter += 1
-    average = sum / counter if counter > 0 else 0
+        for med in data["medicines"]: # Iterate through medicines array
+            price = med.get("price") # Get price for current med
+            if price is not None: # Check for null
+                sum += price # Sum
+                counter += 1 
+    average = sum / counter if counter > 0 else 0 # If counter = 0 then no medicine on JSON
     return {"average": average}
 
 if __name__ == "__main__":
